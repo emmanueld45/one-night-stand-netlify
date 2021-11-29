@@ -1,0 +1,1496 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.centered-div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fixed-notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 230px;
+  display: flex;
+  flex-flow: row nowrap;
+  background: rgb(37, 37, 37);
+  z-index: 2000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.fixed-notification.slide-in {
+  animation: animate-fixed-notification-slide-in 1s ease;
+  right: 10px;
+}
+
+@keyframes animate-fixed-notification-slide-in {
+  0% {
+    right: -100%;
+  }
+
+  50% {
+    right: -50%;
+  }
+
+  100% {
+    right: 10px;
+  }
+}
+
+.fixed-notification.slide-out {
+  animation: animate-fixed-notification-slide-out 1s ease;
+  right: -100%;
+}
+
+@keyframes animate-fixed-notification-slide-out {
+  0% {
+    right: 10px;
+  }
+
+  50% {
+    right: -50%;
+  }
+
+  100% {
+    right: -100%;
+  }
+}
+
+.fixed-notification .row1 {
+  position: relative;
+  margin-right: 10px;
+}
+
+.fixed-notification .row1 .image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fixed-notification .row1 .image-container .image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.fixed-notification .row2 {
+  position: relative;
+  width: 90%;
+}
+
+.fixed-notification .row2 .title {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.fixed-notification .row2 .description {
+  position: relative;
+  font-size: 13px;
+}
+.Header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px 0px;
+  z-index: 1000;
+}
+.Header .logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  color: #d39893;
+  /* font-family: cursive; */
+  font-family: "Courgette", cursive;
+}
+
+.Header nav {
+  position: relative;
+  float: right;
+  right: 200px;
+  top: 5px;
+}
+
+.Header nav ul {
+  position: relative;
+}
+
+.Header nav ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.Header nav ul li .centered-div .icon {
+  width: 30px;
+  height: auto;
+}
+.Header nav ul li .centered-div .text {
+  font-size: 14px;
+  color: black;
+}
+
+.Mobile-header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  /* position: relative; */
+  /* position: fixed;
+  top: 0px;
+  left: 0px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  display: none;
+  background: white;
+  z-index: 1000;
+}
+
+.Mobile-header .logo-text {
+  font-size: 25px;
+  color: #d39893;
+  font-weight: bolder;
+  /* font-family: cursive; */
+  font-family: "Courgette", cursive;
+}
+
+.Mobile-header .activities-icon {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 30px;
+  height: auto;
+  color: #d39893;
+}
+.Mobile-header .menu-icon {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  width: 33px;
+  height: auto;
+  color: #d39893;
+}
+.Mobile-nav {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background: white;
+  box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  z-index: 1000;
+  display: none;
+}
+
+.Mobile-nav .box {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.Mobile-nav .box .icon {
+  width: 25px;
+  height: auto;
+}
+
+.Mobile-nav .box.active {
+  color: #d39893;
+}
+
+.Mobile-nav .box .icon.search {
+  width: 30px;
+}
+
+.Mobile-nav .box .icon.profile {
+  width: 30px;
+}
+
+.users-card-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.users-card-container .user-card {
+  position: relative;
+  width: 21%;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.users-card-container .user-card .user-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 10;
+  object-fit: cover;
+}
+
+.users-card-container .user-card .background-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 20;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+
+.users-card-container .user-card .background-overlay .bottom {
+  position: absolute;
+  width: 100%;
+  padding: 10px 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.users-card-container .user-card .background-overlay .bottom .row1 {
+  position: relative;
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.users-card-container .user-card .background-overlay .bottom .row1 .name {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  font-size: 17px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.users-card-container
+  .user-card
+  .background-overlay
+  .bottom
+  .row1
+  .name
+  .online-status {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background: lightgrey;
+  border: none;
+}
+
+.users-card-container
+  .user-card
+  .background-overlay
+  .bottom
+  .row1
+  .name
+  .online-status.online {
+  background: rgb(110, 144, 243);
+}
+
+.users-card-container .user-card .background-overlay .bottom .row2 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.users-card-container .user-card .background-overlay .bottom .row2 .icon-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+.users-card-container
+  .user-card
+  .background-overlay
+  .bottom
+  .row2
+  .icon-btn.chat {
+  margin-right: 20px;
+}
+.users-card-container
+  .user-card
+  .background-overlay
+  .bottom
+  .row2
+  .icon-btn
+  .icon {
+  position: relative;
+  width: 40px;
+  color: #d39893;
+  top: 3px;
+}
+
+.Authpage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Authpage .left {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow-y: auto;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Authpage .left .action-container {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  transition: 0.5s ease;
+  display: none;
+}
+
+.Authpage .left .action-container.show {
+  display: block;
+  animation: action-container-animation 1s ease;
+}
+
+.Authpage .left .action-container.hide {
+  display: none;
+}
+
+@keyframes action-container-animation {
+  from {
+    top: -100px;
+    opacity: 0.5;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.Authpage .left .action-container .action-title {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  font-size: 15px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+.Authpage .left .action-container .action-error {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  font-size: 14px;
+  color: red;
+  text-align: center;
+}
+
+.Authpage .left .action-container .action-btn {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.Authpage .left .action-container .action-btn.filled {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  background: #d39893;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.Authpage .left .action-container .action-btn.outlined {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  color: black;
+  border: 1px solid lightblue;
+  margin-bottom: 10px;
+}
+
+.Authpage .left .action-container .action-field {
+  position: relative;
+  width: 90%;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background: #eee;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Authpage .left .action-container .action-footer {
+  position: relative;
+  width: 90%;
+  padding: 13px;
+  font-size: 13px;
+  color: rgb(184, 180, 180);
+  text-align: center;
+}
+
+.Authpage .left .action-container .action-back-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Authpage .left .action-container .action-back-container .action-back-btn {
+  position: relative;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #eee;
+  color: grey;
+  cursor: pointer;
+}
+
+.Authpage .right {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow-y: auto;
+  background: lightgrey;
+}
+
+.Authpage .right .background-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+}
+.Discover {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #f5f7fa;
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+.Discover .profile-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Discover .profile-container .left {
+  width: 60%;
+  height: 400px;
+  background: white;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+.Discover .profile-container .left .profile-box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.rotate-right {
+  animation: rotate-right 1s;
+}
+
+.rotate-left {
+  animation: rotate-left 1s;
+}
+@keyframes rotate-right {
+  /* from {
+    transform: rotate(0deg);
+    left: 0%;
+  }
+  to {
+    transform: rotate(180deg);
+    left: 100%;
+  } */
+  from {
+    left: 50%;
+  }
+  to {
+    left: 200%;
+  }
+}
+
+@keyframes rotate-left {
+  /* from {
+    transform: rotate(0deg);
+    left: 0%;
+  }
+  to {
+    transform: rotate(-180deg);
+    left: -100%;
+  } */
+  from {
+    left: -50%;
+  }
+  to {
+    left: -200%;
+  }
+}
+.Discover .profile-container .left .profile-box .user-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.Discover .profile-container .left .profile-box .background-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  border-radius: 20px;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .open-details-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: white;
+  border: 2px solid #d39893;
+  animation: animate-open-details-btn 0.5s ease infinite;
+  display: none;
+}
+
+@keyframes animate-open-details-btn {
+  from {
+    border: 4px solid #d3989369;
+  }
+  to {
+    border: 4px solid #d39893;
+  }
+}
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .photo-count {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding-bottom: 2px;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .photo-count
+  .icon {
+  width: 17px;
+  height: auto;
+  display: inline;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .photo-count
+  .count {
+  position: relative;
+  top: -5px;
+}
+
+.Discover .profile-container .left .profile-box .background-overlay .bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box {
+  width: 33.3%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box
+  .icon-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box
+  .icon-btn
+  .icon {
+  width: 30px;
+  font-size: 25px;
+  height: auto;
+  color: white;
+  /* object-fit: cover; */
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box
+  .name {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box
+  .name
+  .online-status {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background: lightgrey;
+  border: none;
+}
+
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box
+  .name
+  .online-status.online {
+  background: rgb(110, 144, 243);
+}
+.Discover
+  .profile-container
+  .left
+  .profile-box
+  .background-overlay
+  .bottom
+  .box
+  .name
+  .sub {
+  color: white;
+  opacity: 0.6;
+  font-size: 13px;
+  font-weight: normal;
+  display: block;
+}
+.Discover .profile-container .right {
+  width: 40%;
+  height: 400px;
+  z-index: 10;
+}
+
+.Discover .profile-container .right .container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  /* height: 400px; */
+  background: white;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.Discover .profile-container .right .container .name {
+  position: relative;
+  font-size: 23px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.Discover .profile-container .right .container .mood {
+  position: relative;
+  font-size: 14px;
+  color: black;
+  line-height: 20px;
+}
+
+.Discover .profile-container .right .container .centered-div .send-message-btn {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  background: #d398931f;
+  color: #d39893;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.Discover
+  .profile-container
+  .right
+  .container
+  .centered-div
+  .send-message-btn
+  .icon {
+  position: relative;
+  width: 23px;
+  top: 8px;
+  left: 5px;
+}
+.Discover .profile-container .right .container .centered-div .request-btn {
+  position: relative;
+  width: 100%;
+  padding: 13px;
+  background: #d39893;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.Discover
+  .profile-container
+  .right
+  .container
+  .centered-div
+  .request-btn
+  .icon {
+  position: relative;
+  width: 23px;
+  top: 5px;
+}
+
+.Search {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #f5f7fa;
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+.Search .content {
+  width: 70%;
+  margin: auto;
+  background: white;
+}
+
+.Chats {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #f5f7fa;
+  padding-top: 10px;
+  overflow-x: hidden;
+}
+
+.Chats .matches-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  padding: 10px 0px;
+}
+
+.Chats .matches-container .box {
+  position: relative;
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.Chats .matches-container .box:hover {
+  border: 2px solid #d39893;
+}
+.Chats .matches-container .box .image-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.Chats .matches-container .box .image-container .user-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.Chats .matches-container .box .image-container .background-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 20;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+
+.Chats .chats-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  background: white;
+  padding: 20px 0px;
+  border-radius: 20px 20px 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.Chats .chats-container .search-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 20px;
+}
+
+.Chats .chats-container .search-container .search-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Chats .chats-container .search-container .search-btn .icon {
+  color: lightgrey;
+}
+.Chats .chats-container .search-container .search-field {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  background: #f5f7fa;
+  color: black;
+  font-size: 14px;
+}
+.Chats .chats-container .box {
+  position: relative;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.Chats .chats-container .box.searched {
+  background: #d398931a;
+}
+.Chats .chats-container .box:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.Chats .chats-container .box .row1 {
+  position: relative;
+  /* width: 10%; */
+  margin-right: 20px;
+}
+
+.Chats .chats-container .box .row1 .image-container {
+  position: relative;
+  width: 100%;
+}
+.Chats .chats-container .box .row1 .image-container .user-image {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.Chats .chats-container .box .row2 {
+  position: relative;
+  width: 90%;
+}
+
+.Chats .chats-container .box .row2 .name {
+  position: relative;
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.Chats .chats-container .box .row2 .message {
+  position: relative;
+  width: 100%;
+  color: lightgrey;
+  font-size: 15px;
+}
+
+.Chats .chats-container .box .row2 .time {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  font-size: 12px;
+  color: lightgrey;
+}
+.Chats .chats-container .box .row2 .messages-count {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background: #d39893;
+  color: white;
+  border: none;
+  font-size: 12px;
+}
+
+.Messages {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #f5f7fa;
+  padding-top: 30px;
+  overflow-x: hidden;
+}
+
+.Messages .content {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.Messages .content .header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px;
+  background: white;
+  z-index: 100;
+}
+
+.Messages .content .header .row1 {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Messages .content .header .row1 .back-icon {
+  position: relative;
+  width: 64px;
+  cursor: pointer;
+}
+.Messages .content .header .row2 {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.Messages .content .header .row2 .image-container {
+  position: relative;
+  display: inline;
+}
+
+.Messages .content .header .row2 .image-container .user-image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.Messages .content .header .row2 .name {
+  position: relative;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.Messages .content .header .row3 {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Messages .content .header .row3 .menu-btn {
+  position: relative;
+  width: 60px;
+  color: #d39893;
+  cursor: pointer;
+}
+
+.Messages .content .message-body {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: white;
+  overflow-y: auto;
+}
+
+.Messages .content .message-body .message-left {
+  position: relative;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.Messages .content .message-body .message-left .box {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 10px;
+}
+
+.Messages .content .message-body .message-left .box .row1 {
+  position: relative;
+}
+
+.Messages .content .message-body .message-left .box .row1 .user-image {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.Messages .content .message-body .message-left .box .row2 {
+  position: relative;
+}
+.Messages .content .message-body .message-left .box .row2 .text {
+  position: relative;
+  max-width: 200px;
+  background: #eee;
+  color: black;
+  padding: 10px;
+  border-radius: 10px 10px 10px 0px;
+  font-size: 14px;
+}
+
+.Messages .content .message-body .message-left .box .row2 .image-container {
+  position: relative;
+}
+
+.Messages
+  .content
+  .message-body
+  .message-left
+  .box
+  .row2
+  .image-container
+  .image {
+  position: relative;
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Messages .content .message-body .message-left .box .row2 .time {
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  color: grey;
+  margin-top: 5px;
+}
+.Messages .content .message-body .message-right {
+  position: relative;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Messages .content .message-body .message-right .box {
+  position: relative;
+  margin-right: 10px;
+}
+
+.Messages .content .message-body .message-right .box .text {
+  position: relative;
+  max-width: 200px;
+  background: #d39893;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0px 10px;
+  font-size: 14px;
+}
+
+.Messages .content .message-body .message-right .box .time {
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  color: grey;
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Messages .content .message-body .message-right .box .image-container {
+  position: relative;
+}
+
+.Messages .content .message-body .message-right .box .image-container .image {
+  position: relative;
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Messages .content .bottom {
+  position: fixed !important;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  background: white;
+  box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.Messages .content .bottom .field {
+  position: relative;
+  width: 100%;
+  border: none;
+  background: white;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.Messages .content .bottom .send-btn {
+  position: relative;
+  border: none;
+  background: white;
+  padding: 7px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.Messages .content .bottom .send-btn .circular-progress-icon {
+  color: #d39893;
+  /* width: 20px;
+  font-size: 20px; */
+}
+
+.Messages .content .bottom .send-btn .icon {
+  color: lightgrey;
+}
+.Messages .content .bottom .send-btn .icon.active {
+  color: #d39893;
+}
+
+.Messages .content .bottom .smiley-btn {
+  position: relative;
+  border: none;
+  background: white;
+  margin-right: 10px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.Messages .content .bottom .smiley-btn .icon {
+  color: lightgrey;
+}
+.Messages .content .bottom .smiley-btn .icon.active {
+  color: #d39893;
+}
+
+.Messages .smilies-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background: green;
+}
+
+.Messages .smilies-container .smiley {
+  width: 70px !important;
+  height: 70px !important;
+}
+/** Medium screen start ***/
+@media only screen and (max-width: 1150px) {
+  .Discover .profile-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .Search .content {
+    width: 90%;
+    margin: auto;
+  }
+}
+/*** medium screen end ***/
+
+/** Small screens start ***/
+@media only screen and (max-width: 690px) {
+  .Header {
+    display: none;
+  }
+
+  .Mobile-header {
+    display: flex;
+  }
+
+  .Mobile-nav {
+    display: flex;
+  }
+
+  .users-card-container {
+    padding: 5px;
+  }
+  .users-card-container .user-card {
+    position: relative;
+    width: 41%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Authpage {
+    flex-flow: row wrap;
+  }
+
+  .Authpage .left {
+    width: 100%;
+  }
+
+  .Authpage .left .action-container {
+    width: 80%;
+  }
+  .Authpage .right {
+    display: none;
+  }
+
+  .Discover {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: white;
+    padding-top: 0px;
+  }
+
+  .Discover .profile-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .Discover .profile-container .left {
+    width: 100%;
+  }
+
+  .Discover
+    .profile-container
+    .left
+    .profile-box
+    .background-overlay
+    .open-details-btn {
+    display: block;
+  }
+
+  .Discover .profile-container .right {
+    width: 100%;
+  }
+
+  .Search .content {
+    width: 100%;
+    margin: auto;
+    background: #f5f7fa;
+  }
+
+  .Chats .matches-container {
+    width: 95%;
+  }
+
+  .Chats .matches-container .box {
+    width: 60px;
+  }
+
+  .Chats .matches-container .box .image-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .Chats .chats-container {
+    width: 100%;
+  }
+
+  .Chats .chats-container .box .row1 .image-container .user-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+  }
+  .Chats .chats-container .box .row2 {
+    position: relative;
+    width: 70%;
+  }
+
+  .Chats .chats-container .box .row2 .name {
+    font-size: 15px;
+  }
+  .Chats .chats-container .box .row2 .message {
+    font-size: 13px;
+  }
+
+  .Messages {
+    width: 100%;
+    height: 100vh;
+    padding-top: 0px;
+  }
+
+  .Messages .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .Messages .content .message-body {
+    /* background: grey; */
+    /* height:calc(100vh - 130px) */
+    height: calc(100% - 120px);
+  }
+
+  .Messages .content .bottom {
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+/** Small screens end ***/

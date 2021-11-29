@@ -1,0 +1,283 @@
+.ProfileHome {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #f5f7fa;
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+.ProfileHome .profile-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  background: white;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex: row nowrap;
+  padding: 20px 40px;
+  margin-bottom: 100px;
+}
+
+.ProfileHome .profile-container .settings-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  color: #d39893;
+  cursor: pointer;
+}
+
+.ProfileHome .profile-container .left {
+  height: auto;
+  background: white;
+  margin-right: 25px;
+}
+
+.ProfileHome .profile-container .left .image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ProfileHome .profile-container .left .image-container .image {
+  position: relative;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ProfileHome .profile-container .left .image-container .edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: salmon;
+  z-index: 20;
+  cursor: pointer;
+}
+.ProfileHome .profile-container .right {
+  width: 90%;
+  height: auto;
+  background: white;
+}
+
+.ProfileHome .profile-container .right .notification-container {
+  position: relative;
+  width: 100%;
+}
+
+.ProfileHome .profile-container .right .notification-container .box {
+  position: relative;
+  width: 90%;
+  border-radius: 10px;
+  background: rgb(235, 242, 245);
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px 5px;
+}
+
+.ProfileHome .profile-container .right .notification-container .box .row1 {
+  position: relative;
+  margin-right: 15px;
+}
+
+.ProfileHome
+  .profile-container
+  .right
+  .notification-container
+  .box
+  .row1
+  .icon-button {
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #eee;
+  color: lightgrey;
+}
+
+.ProfileHome
+  .profile-container
+  .right
+  .notification-container
+  .box
+  .row1
+  .icon-button
+  .icon {
+  position: relative;
+}
+.ProfileHome .profile-container .right .notification-container .box .row2 {
+  position: relative;
+  width: 90%;
+}
+
+.ProfileHome
+  .profile-container
+  .right
+  .notification-container
+  .box
+  .row2
+  .title {
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ProfileHome
+  .profile-container
+  .right
+  .notification-container
+  .box
+  .row2
+  .description {
+  position: relative;
+  width: 100%;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgb(46, 45, 45);
+}
+.ProfileHome .profile-container .right .name {
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.ProfileHome .profile-container .right .name .check-icon {
+  color: royalblue;
+  width: 17px;
+  position: relative;
+  top: 3px;
+  right: 3px;
+}
+.ProfileHome .profile-container .right .location {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  color: rgb(170, 170, 170);
+  margin-bottom: 10px;
+}
+
+.ProfileHome .profile-container .right .balance {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  color: #d39893;
+  margin-bottom: 20px;
+}
+.ProfileHome .profile-container .right .images-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 30px;
+}
+
+.ProfileHome .profile-container .right .images-container .box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #f3d5d254;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProfileHome .profile-container .right .images-container .box .add-icon {
+  color: grey;
+  cursor: pointer;
+}
+.ProfileHome .profile-container .right .images-container .box .edit-icon {
+  color: #f3d5d2d7;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.ProfileHome .profile-container .right .images-container .box .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 10;
+}
+/** Medium screen start ***/
+@media only screen and (max-width: 1150px) {
+}
+/*** medium screen end ***/
+
+/** Small screens start ***/
+@media only screen and (max-width: 690px) {
+  .ProfileHome {
+    background: white;
+    padding-top: 20px;
+  }
+  .ProfileHome .profile-container {
+    position: relative;
+    width: 100%;
+
+    flex-flow: row wrap;
+    padding: 20px 0px;
+  }
+
+  .ProfileHome .profile-container .left {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .ProfileHome .profile-container .left .image-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ProfileHome .profile-container .left .image-container .image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+
+  .ProfileHome .profile-container .right {
+    width: 100%;
+  }
+
+  .ProfileHome .profile-container .right .name {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .ProfileHome .profile-container .right .location {
+    text-align: center;
+  }
+
+  .ProfileHome .profile-container .right .balance {
+    text-align: center;
+  }
+
+  .ProfileHome .profile-container .right .images-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .ProfileHome .profile-container .right .images-container .box {
+    width: 45%;
+    height: 100px;
+  }
+}
+/** Small screens end ***/
